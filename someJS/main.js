@@ -176,6 +176,7 @@ function superButtonMachine(){
     btnBblockSecondary = document.querySelector('.btn-block__secondary'),
     btnBblockSecondaryTelegram = document.querySelector('.btn-block__secondary_telegram'),
     btnBblockSecondaryViber = document.querySelector('.btn-block__secondary_viber'),
+    pulseFrame = document.querySelectorAll('.pulse-frame'),
     secondaryBtn = document.querySelector('.super-btn__secondary');
     superBtn.addEventListener('click', ()=>{
         if(superBtn.classList.contains('active')){
@@ -189,6 +190,10 @@ function superButtonMachine(){
                 superBtnIcon.classList.remove('fa-times');
                 superBtnIcon.classList.add('fa-comment');
             },250)
+            pulseFrame.forEach (pulse=>{
+                pulse.style.display='block';
+                pulse.classList.remove('active');
+            });
         }else{
             superBtn.classList.add('active');
             btnBblockSecondary.classList.add('active');
@@ -203,6 +208,10 @@ function superButtonMachine(){
             // setTimeout(()=>{
             //     superBtnIcon.classList.remove('active');
             // },750);
+            pulseFrame.forEach (pulse=>{
+                pulse.style.display='none';
+                pulse.classList.add('active')
+            });
         }
         superBtnIcon.classList.add('active');
         setTimeout(()=>{
