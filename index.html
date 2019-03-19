@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>JS</title>
+</head>
+<body>
+<nav class="nav-menu">
+  <ul>
+    <li>Home
+       <ul class="sub__menu"> 
+        <li>Products</li>
+        <li>Shop</li>
+        <li>About us</li>
+      </ul>
+    </li>
+    <li>Products
+        <ul class="sub__menu"> 
+         <li>Products</li>
+         <li>Shop</li>
+         <li>About us</li>
+       </ul>
+    </li>
+    <li>Shop
+        <ul class="sub__menu"> 
+         <li>Products</li>
+         <li>Shop</li>
+         <li>About us</li>
+       </ul>
+    </li>
+    <li>About Us
+        <ul class="sub__menu"> 
+         <li>Products</li>
+         <li>Shop</li>
+         <li>About us</li>
+       </ul>
+    </li>
+  </ul>
+</nav>
+<div class="app">
+  <div class="box image">
+    <div class="image__block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg" alt="">
+    </div>
+    
+    <div class="input">
+      <input
+        id="img-url"
+        type="text"
+        placeholder="Введите URL картинки"
+        value="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg"
+      >
+    </div>
+  </div>
+  <div class="box settings">
+    <div class="sliders">
+      <div class="slider">
+        <label for="grayscale">Оттенки серого</label>
+        <input type="range" min="0" max="100" value="0" id="grayscale">
+      </div>
+
+      <div class="slider">
+        <label for="contrast">Контраст</label>
+        <input type="range" min="50" max="200" value="100" id="contrast">
+      </div>
+
+      <div class="slider">
+        <label for="brightness">Яркость</label>
+        <input type="range" min="50" max="200" value="100" id="brightness">
+      </div>
+
+      <div class="slider">
+        <label for="sepia">Сепия</label>
+        <input type="range" min="0" max="100" value="0" id="sepia">
+      </div>
+
+      <div class="slider">
+        <label for="saturate">Насыщенность</label>
+        <input type="range" min="0" max="200" value="100" id="saturate">
+      </div>
+      <div class="slider">
+        <label for="size">Размер</label>
+        <input type="range" min="1" max="100" value="50" id="size">
+      </div>
+
+    </div>
+    <div class="buttons">
+      <button class="btn" id="reset" disabled>Сбросить</button>
+    </div>
+    <div class="message">
+      <button class="btnM">Show</button>
+      <div class="message_item">
+        <ul>
+        </ul>
+      </div>
+    </div>
+    <input type="text" id="input" placeholder="Нажмите Enter">
+    <div class="slider">
+      <label for="size">Верхний левый угол</label>
+      <input type="range" min="0" max="100" value="0" id="topLeft" step="0.5">
+    </div>
+    <div class="slider">
+      <label for="size">Нижний правый угол</label>
+      <input type="range" min="0" max="100" value="0" id="bottomRight" step="0.5">
+    </div>
+    <input type="text" class="productName">
+    <input type="text" class="productDiscroption">
+    <input type="text" class="productPrice">
+    <button class="productAdd">Add</button>
+    <table class="tableProduct">
+      <thead>
+          <tr>
+              <th>name</th>
+              <th>disc</th>
+              <th>price</th>
+          </tr>
+      </thead>
+     <tbody>
+       
+     </tbody>
+
+    </table>
+  </div>
+</div>
+<div class="super-btn">
+  <button class="super-btn__main"><i class="icon fas fa-comment"></i></button>   
+  <div class="btn-block__secondary">
+      <button class="super-btn__secondary"><i class="fab fa-github"></i></button>  
+  </div> 
+  <div class="btn-block__secondary btn-block__secondary_telegram">
+      <button class="super-btn__secondary super-btn__secondary_telegram"><i class="fab fa-telegram-plane"></i></button>  
+  </div> 
+  <div class="btn-block__secondary btn-block__secondary_viber">
+      <button class="super-btn__secondary super-btn__secondary_viber"><i class="fab fa-viber"></i></button>  
+  </div>     
+</div>
+<script src="main.js"></script>
+</body>
+</html>
