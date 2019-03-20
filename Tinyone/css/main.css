@@ -1,0 +1,524 @@
+﻿/* Спецификация */
+
+body {
+    font-family: 'Exo', sans-serif;
+
+}
+
+a:hover{
+    text-decoration: none;
+    }
+
+h1{
+text-align: center;
+padding-top: 89px;
+padding-bottom: 35px;
+font-size: 60px;
+color: #282828;
+font-weight: 100;
+}
+
+h2{
+font-size: 40px;
+color: #282828;
+padding-top: 5px;
+padding-bottom: 10px;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+
+p{
+    color: #6e6e6d;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.block__new-text{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ff6d6d;
+    font-weight: 400;
+}
+
+.block__dots{
+    color: #ff6d6d;
+    letter-spacing: 3px;
+}
+
+.btn{
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    color:#fff;
+    background: #ff6d6d;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 17px;
+    width: 190px;
+    letter-spacing: 5px;
+    transition: all 0.5s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f6f5f3;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #f6f5f3;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #f6f5f3;
+}
+
+/* Первый экран */
+
+.header{
+background: url(../img/bg_img.jpg) no-repeat center /cover;
+height: 100vh;
+}
+
+.intro{
+    padding-top: 145px;
+    padding-bottom: 145px;
+    text-align: center;
+}
+
+.fa-play-circle{
+    padding-bottom: 35px;
+    color: #8185a3;
+    text-align: center;
+}
+
+.intro__sign{
+    margin-top: 19px;
+    margin-bottom: 83px;
+    font-size: 14px;
+    color: #777779;
+    text-align: center;
+}
+
+/* Второй экран */
+.description{
+    background: url(../img/Rectangle_bg.jpg) no-repeat right /auto 100%;
+}
+
+.block__features{
+    padding-top: 135px;
+}
+
+.platform{
+    padding-top: 165px;
+    padding-bottom: 145px;
+}
+
+
+.platform__text{
+    margin-top: 30px;
+}
+/* Третий экран */
+
+.features{
+    background:#f6f5f3;
+    background-image:  url(../img/pen_holder2.png),
+    url(../img/Earphones1.png),
+    url(../img/coffee_cup1.png);
+    background-position: top left 100px, top right 100px, bottom right 100px;
+    background-repeat: no-repeat,  no-repeat, no-repeat;
+}
+
+.list{
+    padding-top: 70px;
+    padding-bottom: 180px;
+}
+
+.list__icon{
+    margin-bottom: 25px;
+}
+
+.list__title{
+    margin-bottom: 10px;
+}
+
+/* Четвертый экран */
+.designs{
+    background: url(../img/rectangle_21.png) no-repeat left  /auto 100%;
+    padding: 95px 0;
+}
+
+.macbook{
+    margin-left: -90px;
+}
+
+.design{
+    margin-left: 30px;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.block__text{
+    padding-top: 15px;
+    color: #6e6e6d;
+}
+
+/* Пятый экран */
+.founders{
+    background: url(../img/foulder_bg.jpg) no-repeat center /cover;
+}
+
+.founder{
+    padding: 108px 0px 70px 0px;
+}
+
+.founder__photo{
+    width: 76px;
+    height: 76px;
+    background: #4e4e5e;
+    margin: 0 auto;
+    border: 2px solid #1d1e24;
+    margin-bottom: 23px;
+}
+
+.founder__name{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.founder__co{
+    margin-bottom:30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ff6d6d;
+}
+
+.founder__text{
+    font-style: italic;
+    color: #b3b3b5;
+}
+
+.partners{
+    padding: 0 50px;
+}
+
+.partners__img{
+    margin-bottom: 75px;
+    width: 100% auto;
+}
+
+/* Шестой экран */
+
+.best-features{
+background: #f6f5f3;
+}
+
+.block_padding{
+    padding-top: 105px;
+    padding-bottom: 75px;
+}
+
+/* Седьмой экран */
+
+.trial{
+background: #323969;
+}
+
+.block_padding-trial{
+    padding-top: 94px;
+    padding-bottom: 45px;
+}
+
+.block__title_color{
+    color: #fff;
+}
+
+.monitor__img{
+    width: 100%;
+}
+
+.trial-signature{
+    padding-bottom: 15px;
+}
+.trial-signature__arrow{
+    padding-right: 15px;
+}
+
+.trial-signature__text{
+    color: #f6f5f3;
+}
+
+.form{
+    padding-bottom: 45px;
+}
+
+.form input{
+    border: 1px solid #999cb4;
+    background: #464c77;
+    padding:15px 0px 15px 20px;
+    width:260px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.form__button{
+    width:260px;
+    font-size: 16px;
+    color:#fff;
+    background: #ff6d6d;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.form__button:hover{
+    margin: -5px 5px 5px -5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.signing{
+    color: #a8aabc;
+    padding-bottom: 85px;
+}
+
+.signing__link{
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Футер */
+.footer{
+    background: url(../img/rectangle_13.png) no-repeat right  /auto;
+}
+.icon{
+padding-top: 80px;
+}
+
+.footer-list{
+    padding-top: 85px;
+    font-size: 22px;
+    color: #282828;
+}
+
+.icon__text{
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 2.3em;
+}
+
+.footer-items-list{
+    color: #717171;
+    font-size: 14px;
+}
+
+.footer-items-list li{
+    line-height: 2.3em;
+    margin: 0;
+    display: block;
+}
+
+.input-group{
+    padding-top: 10px;
+}
+
+.form-control{
+    height: 50px;
+}
+
+.btn-outline-secondary{
+    background: #ff6d6d url(../img/plane_icon.png) no-repeat center center;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+.newsletter{
+    padding-left: 50px;
+}
+
+.form-control{
+    background: #f6f6f6;
+}
+.newsletter__socials i{
+    padding-top: 10px;
+    padding-right: 25px;
+    font-size: 20px;
+    color: #cbcbcb;
+}
+/* Медиа-запросы */
+
+@media screen and (max-width: 1200px) {
+    .description {
+        background: url(../img/Rectangle_bg.jpg) no-repeat right /cover;
+    }
+
+    .form input {
+    width: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .description {
+        background: url(../img/Rectangle_bg.jpg) no-repeat right /cover;
+    }
+
+    .features{
+        background-position: top left, top right, bottom right;
+        background-repeat: no-repeat,  no-repeat, no-repeat;
+    }
+
+    .designs{
+        background: url(../img/rectangle_13.png) no-repeat right  /auto 100%;
+        padding: 95px 0;
+    }
+
+    .form{
+    display: flex;
+    flex-direction: column;
+    }
+
+    .form >*{
+    margin-bottom: 30px;
+    }
+
+    .founder{
+        padding: 20px 0;
+    }
+
+    .partners{
+        padding: 0;
+    }
+    .partners__img{
+        padding 0;
+        width: 20% auto;
+    }
+    .form__button{
+        width: auto;
+        padding: 15px 0;
+    }
+
+    .flex-md-wrap > div{
+        width: 50%;
+    }
+
+    .footer{
+        background: url(../img/rectangle_13.png) no-repeat right top  /auto;
+    }
+
+    ul, li{
+        padding: 0;
+    }
+
+    .footer-items-list{
+        text-align: center;
+    }
+    .footer-list{
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .macbook{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .partners__img{
+        padding: 0 10px;
+        width: 20%;
+    }
+
+    .features{
+        background-position: top left -120px, top right -90px, bottom right -100px;
+        background-repeat: no-repeat,  no-repeat, no-repeat;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+
+    h1{
+        font-size: 50px;
+    }
+
+    .intro {
+    padding-top: 25px;
+
+}
+    .intro__sign{
+    color:#1d1e24;
+    }
+
+    .features{
+        background-position: top left -120px, top right -90px, bottom right -100px;
+        background-repeat: no-repeat,  no-repeat, no-repeat;
+    }
+
+    .col-f-d-column{
+        flex-direction: column;
+    }
+
+    .list:last-child{
+        margin-bottom: 70px;
+    }
+
+    .footer{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .flex-md-wrap > div {
+    width: 100%;
+}
+
+.design .block__dots{
+    color: #1d1e24;
+}
+
+.icon {
+    padding-top: 100px;
+}
+
+.newsletter{
+    padding-left: 0;
+    padding-bottom: 20px;
+}
+
+.footer-list{
+    padding-top: 0px;
+}
+
+}
+
+@media screen and (max-width: 440px) {
+    h1{
+        font-size: 35px;
+    }
+
+    .design .block__dots{
+    color: #1d1e24;
+    }
+
+    .design .block__new-text{
+        color: #fff;
+    }
+}
