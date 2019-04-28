@@ -13,34 +13,55 @@
 </head>
 <body>
 <nav class="nav-menu">
-  <ul>
-    <li>Home
+  <ul class="nav-menu__list">
+    <li class="nav-menu__list-item">Home
        <ul class="sub__menu"> 
         <li>Products</li>
         <li>Shop</li>
         <li>About us</li>
       </ul>
     </li>
-    <li>Products
+    <li class="nav-menu__list-item">Products
         <ul class="sub__menu"> 
          <li>Products</li>
          <li>Shop</li>
          <li>About us</li>
-       </ul>
+        </ul>
     </li>
-    <li>Shop
+    <li class="nav-menu__list-item">Shop
         <ul class="sub__menu"> 
          <li>Products</li>
          <li>Shop</li>
          <li>About us</li>
-       </ul>
+        </ul>
     </li>
-    <li>About Us
+    <li class="nav-menu__list-item">About Us
         <ul class="sub__menu"> 
          <li>Products</li>
          <li>Shop</li>
          <li>About us</li>
-       </ul>
+        </ul>
+    </li>
+    <li class="nav-menu__list-item">About Us2
+      <ul class="sub__menu"> 
+       <li>Products</li>
+       <li>Shop</li>
+       <li>About us</li>
+      </ul>
+    </li>
+    <li class="nav-menu__list-item">About Us3
+      <ul class="sub__menu"> 
+       <li>Products</li>
+       <li>Shop</li>
+       <li>About us</li>
+      </ul>
+    </li>
+    <li class="nav-menu__list-item">About Us4
+      <ul class="sub__menu"> 
+       <li>Products</li>
+       <li>Shop</li>
+       <li>About us</li>
+      </ul>
     </li>
   </ul>
 </nav>
@@ -48,15 +69,13 @@
   <div class="box image">
     <div class="image__block">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg" alt="">
-    </div>
-    
+    </div> 
     <div class="input">
       <input
         id="img-url"
         type="text"
         placeholder="Введите URL картинки"
-        value="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg"
-      >
+        value="https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg">
     </div>
   </div>
   <div class="box settings">
@@ -95,9 +114,12 @@
       <button class="btn" id="reset" disabled>Сбросить</button>
     </div>
     <div class="message">
-      <button class="btnM">Show</button>
+      <button class="btnM"><span>Show</span></button>
       <div class="message_item">
         <ul>
+        </ul>
+        <ul class="message_item__list">
+
         </ul>
       </div>
     </div>
@@ -122,10 +144,8 @@
               <th>price</th>
           </tr>
       </thead>
-     <tbody>
-       
+     <tbody>     
      </tbody>
-
     </table>
   </div>
 </div>

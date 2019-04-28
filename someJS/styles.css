@@ -13,7 +13,7 @@ body {
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   background: linear-gradient(#ad5389, #3c1053);
 }
 input{
@@ -183,6 +183,22 @@ color:rgb(0, 0, 0)
   margin: 0 auto;
   padding: 5px;
   margin-bottom: 20px;
+  transform: skew(-15deg);
+  height: 85%;
+  width: 80%;
+  font-size: 18px;
+  background: linear-gradient(90deg, rgba(98,39,116,1) 0%, rgba(197,51,100,1) 100%);
+  color: #fff;
+  transition: all 0.7s ease;
+  border: none;
+}
+.btnM:hover{
+  background: linear-gradient(90deg, rgba(197,51,100,1) 0%, rgba(98,39,116,1) 100%);
+  cursor: pointer;
+}
+.btnM span{
+  transform: skew(15deg);
+  display: inline-block
 }
 .message_item{
   display: none;
@@ -201,6 +217,10 @@ color:rgb(0, 0, 0)
 .message_item:hover{
   width: 200px;
 }
+.nav-menu__list-item.empty{
+  display: none;
+}
+
 .message_item ul li{
   padding: 5px;
   display: block;
@@ -316,6 +336,30 @@ border: 1px solid #999;
 }
 .productName, .productDiscroption, .productPrice{
   margin: 5px 0;
+}
+.bg-big{
+  height: 700px;
+  background: url(bg.jpg) center;
+  background-attachment: fixed;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.bg-big::before{
+position: absolute;
+content: '';
+height: 100%;
+width: 50%;
+transform: skew(-15deg);
+margin-left: -25%;
+left: 50%;
+box-shadow: 20px 0 100px rgba(0, 0, 0, .2);
+transition: all 0.5s ease;
+}
+.bg-big.active::before{
+  background: url(bg.jpg) center;
+  background-position-y: -74%;
+  background-size: 700%;
+  background-attachment: fixed;
 }
 .super-btn{
   position: fixed;

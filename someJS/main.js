@@ -15,7 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
     messageItemUl = messageItem.querySelector('ul'),
     liAdder = document.querySelector('#input'),
     input = document.querySelector('.input input'),
-    liMenu = document.querySelectorAll('.nav-menu>ul>li')
+    liMenu = document.querySelectorAll('.nav-menu>ul>li'),
+    navMennu =  document.querySelector('.nav-menu__list'),
     defaultsFilters = {
         grayscale:0,
         contrast:100,
@@ -218,6 +219,29 @@ function superButtonMachine(){
             superBtnIcon.classList.remove('active');
         },750);
     })
+
+  }
+  menuBoost();
+  function menuBoost(){
+    const navMennuChildren = navMennu.children.length,
+    messageItemList = document.querySelector('.message_item__list'),
+    screenWidth = screen.width;
+    if(navMennuChildren>4){
+        for (let i = 4; i < navMennuChildren; i++) {
+            console.log(navMennuChildren)
+            console.log(navMennu.children[i]);
+            const menuItemClone = navMennu.children[i].cloneNode(true);
+            messageItemList.appendChild(menuItemClone); 
+            navMennu.children[i].classList.add('empty');
+                   
+        }
+        // console.log(navMennu.lastElementChild)
+        // const menuItemClone = navMennu.lastElementChild.cloneNode(true);
+        // navMennu.lastElementChild.remove();
+        // messageItemList.appendChild(menuItemClone);
+    }else{
+        return;
+    }
 
   }
 });
