@@ -1,107 +1,40 @@
-$(function() {
-
-    $('.main-slider').slick({
-        vertical: true,
-        infinite: true,
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        speed:1000,
-        slidesToScroll: 1,
-        autoplay: true,
-
-        responsive: [
-       {
-         breakpoint: 992,
-         settings: {
-         arrows: false,
-         dots: false,
-         slidesToShow: 1
-         }
-       },
-
-     ]
-    });
-
-});
-
-$(function() {
-
-    $('.video-slider').slick({
-        vertical: true,
-        infinite: true,
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        speed:1200,
-        slidesToScroll: 1,
-        //autoplay: true,
-
-        responsive: [
-       {
-         breakpoint: 992,
-         settings: {
-         arrows: false,
-         autoplay: true,
-         dots: false,
-         slidesToShow: 1
-         }
-       },
-
-     ]
-    });
-
-});
-
-$(function() {
-
-    $('.side1-slider').slick({
-        infinite: true,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        //autoplay: true,
-
-        responsive: [
-       {
-         breakpoint: 1120,
-         settings: {
-         arrows: false,
-         slidesToShow: 1
-         }
-       },
-
-     ]
-    });
-
-});
-
-$(function() {
-new WOW().init();
-});
-portfolioBlockShow();
-function portfolioBlockShow(){
-  const portfolioBlock = document.querySelectorAll('.portfolio-block');
-  for(let i=0; i<portfolioBlock.length; i++){
-   const  item = portfolioBlock[i];
-   if(i%2){
-    item.classList.add('wow', 'fadeInLeft')
-   }else{
-    item.classList.add('wow', 'fadeInRight')
-   }
-  }
-}
-
-// titleShow();
-// function titleShow(){
-//   const block = document.querySelectorAll('.portfolio-block');
-//   block.forEach(item=>{
-//     const blockTitle = item.querySelector('h3');
-//     item.onmouseover = function(){  
-//       blockTitle.classList.add('active');
-//     };
-//     item.onmouseout = function(){  
-//       blockTitle.classList.remove('active');
-//     };
-//   });
-// }
+;(function(factory) {
+	'use strict';
+	if ( typeof define === 'function' && define.amd ) {
+		define(['jquery'], factory);
+	} else if ( typeof exports !== 'undefined' ) {
+		module.exports = factory(require('jquery'));
+	} else {
+		factory(jQuery);
+	}
+}(function($) {
+	new WOW().init();
+	portfolioBlockShow();
+		function portfolioBlockShow(){
+		const portfolioBlock = document.querySelectorAll('.portfolio-block');
+		for(let i=0; i<portfolioBlock.length; i++){
+			const  item = portfolioBlock[i];
+			if(i%2){
+			item.classList.add('wow', 'fadeInLeft')
+			}else{
+			item.classList.add('wow', 'fadeInRight')
+			}
+		}
+	}
+	//Плавынй переход по нажатию на якорь 
+	if( $(".js-scroll").length ){
+		$(".js-scroll").on("click", function (event) {
+			//отменяем стандартную обработку нажатия по ссылке
+			event.preventDefault();
+			//забираем идентификатор бока с атрибута href
+			var id  = $(this).attr('href'),
+			//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;	
+			$('body,html').animate({scrollTop: top}, 250, 'linear');
+		});
+	}
+	VanillaTilt.init(document.querySelectorAll('.portfolio-item'), {
+		max: 7,
+		speed: 400
+	});
+}));

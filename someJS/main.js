@@ -228,12 +228,11 @@ function superButtonMachine(){
     screenWidth = screen.width;
     if(navMennuChildren>4){
         for (let i = 4; i < navMennuChildren; i++) {
-            console.log(navMennuChildren)
-            console.log(navMennu.children[i]);
             const menuItemClone = navMennu.children[i].cloneNode(true);
             messageItemList.appendChild(menuItemClone); 
             navMennu.children[i].classList.add('empty');
-                   
+            // console.log(navMennuChildren)
+            // console.log(navMennu.children[i]);        
         }
         // console.log(navMennu.lastElementChild)
         // const menuItemClone = navMennu.lastElementChild.cloneNode(true);
