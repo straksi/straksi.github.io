@@ -1,0 +1,76 @@
+::placeholder
+	color: #fff
+	font-size: 20px
+	font-weight: 300
+	@media screen and (max-width:425px)
+		font-size: 18px
+::-webkit-scrollbar
+	width: 10px
+	height: 10px
+::-webkit-scrollbar-track
+	background: transparent
+::-webkit-scrollbar-thumb
+	background:  darken(#eeeeee, 10%)
+	border-radius: 10px
+	&:hover
+		background: darken(#eeeeee, 20%)
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	min-width: 279px
+	position: relative
+	line-height: 1.25
+	font-family: $default-font
+	overflow-x: hidden
+	overflow-y: overlay
+	color: $text
+	// letter-spacing: 0.02em
+	box-sizing: border-box
+	font-weight: 300
+	font-size: 18px
+h1, h2, h3 ,h4, h5 ,h6
+	margin: 0
+	padding: 0
+	color: $text
+	line-height: 1.2em
+p
+	font-size: 18px
+	color: $text
+	font-family: $default-font
+	line-height: 1.45em
+	font-weight: 300
+span
+	color: $text
+	font-weight: 300
+a
+	text-decoration: none
+	color: $text
+	transition: all .25s ease
+	&:hover
+		text-decoration: none
+		cursor: pointer
+ul
+	padding-left: 0
+	margin-bottom: 0
+	list-style: none
+b, strong
+	font-weight: 700
+input
+	font-family: $default-font
+	color: $text
+.overlay
+	position: fixed
+	width: 100vw
+	height: calc(100vh - 80px)
+	top: 80px
+	left: 0
+	pointer-events: none
+	background: #222
+	opacity: 0
+	z-index: 5
+	transition: all .25s ease
+	&.is-active
+		opacity: 0.6
+		pointer-events: all

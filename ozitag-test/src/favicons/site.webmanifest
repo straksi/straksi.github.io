@@ -1,0 +1,20 @@
+{
+    "name": "peugeot.by",
+    "short_name": "peugeot.by",
+    "icons": [
+        {
+            "src": "https://peugeot.by/favicons/android-chrome-192x192.png?v=web2",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://peugeot.by/favicons/android-chrome-512x512.png?v=web2",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "https://peugeot.by/",
+    "display": "standalone"
+}

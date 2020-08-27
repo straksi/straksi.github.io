@@ -1,0 +1,235 @@
+.header
+	box-shadow: 0 8px 24px 1px rgba(55,55,55,.14)
+	position: relative
+	z-index: 8
+	margin-bottom: 3rem
+	height: 80px
+	&-w
+	&-menu
+		&>.header-list
+			display: flex
+			height: 80px
+			list-style: none
+			position: relative
+			margin-bottom: 0
+			width: 100%
+			+media-breakpoint-down(md)
+				display: block
+				height: auto
+				width: 100%
+			&>.header-list__item
+				height: 100%
+				transition: all .25s ease
+				+media-breakpoint-down(md)
+					// padding: 0 30px
+				&:hover	
+					+media-breakpoint-up(lg)		
+						&>.header-list__link
+							border-bottom: 3px solid rgba(orange, 1)
+							color: $text
+				&.is-active
+					&>.header-list
+						border: 2px solid rgba(#000, 0.04)
+						pointer-events: all
+						+media-breakpoint-down(md)
+							border: none
+				&>.header-list__link
+					margin: 0 30px
+					height: 100%
+					display: flex
+					line-height: 1em
+					align-items: center
+					justify-content: center
+					border-bottom: 3px solid rgba(orange, 0)
+					font-weight: 500
+					+media-breakpoint-down(md)
+						display: block
+						padding: 12px 0
+						// margin: 0
+				&>.header-list
+					border: 2px solid rgba(#000, 0.04)
+					padding: 20px
+					position: absolute
+					top: 100%
+					left: 0
+					// max-height: 0
+					overflow: hidden
+					transition: all .25s ease
+					opacity: 0
+					background: #fff
+					width: 100%
+					display: flex
+					pointer-events: none
+					+media-breakpoint-down(md)
+						position: static
+						opacity: 1
+						display: none
+						background: rgba(gray, .065)
+						pointer-events: all
+						padding: 0
+						border: none
+					&>.header-list__item
+						margin: 0 40px
+						+media-breakpoint-down(lg)
+							margin: 0 20px
+						+media-breakpoint-down(md)
+							margin: 0
+							padding: 0
+							// margin-left: 30px
+							border-bottom: 2px solid rgba(gray, .15)
+						&>.header-list__link
+							font-weight: 500
+							padding: 5px 0
+							display: block
+							+media-breakpoint-down(md)
+								padding-top: 12px
+								padding-left: 30px
+						&>.header-list
+							&>.header-list__item
+								&:not(:last-child)
+									+media-breakpoint-down(md)
+										border-bottom: 2px solid rgba(gray, .15)
+								&:first-child
+									+media-breakpoint-down(md)
+										border-top: 2px solid rgba(gray, .15)
+								&>.header-list__link
+									font-size: 16px
+									padding: 5px 0
+									display: block
+									+media-breakpoint-down(md)
+										padding-top: 13px
+										padding-left: 45px
+
+	&-list
+		&__link
+			&:hover
+				color: orange
+			+media-breakpoint-down(md)
+				height: 45px
+		&__item
+			+media-breakpoint-down(md)
+				display: flex
+				flex-wrap: wrap
+	&-arrow
+		+media-breakpoint-down(md)
+			width: 45px
+			height: 45px
+			// background: #000
+			margin-left: auto
+			margin-right: 10px
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				width: 2px
+				height: 80%
+				background: gray
+				opacity: 0.15
+				transition: all .25s ease
+			&:after
+				position: absolute
+				content: ''
+				top: 50%
+				transform: translate(-50%, -50%)
+				left: 50%
+				width: 10px
+				height: 6px
+				background: #000
+				clip-path: polygon(50% 100%, 0 0, 100% 0)
+				transition: all .25s ease
+	&-burger
+		width: 80px
+		height: 80px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-left: auto
+		margin-right: calc((100% - 100vw)/2)
+		&.is-close
+			.header-bar
+				span
+					opacity: 0
+				&:before
+					transform: rotate(-45deg)
+					top: 13px
+					background-color: orange
+				&:after
+					transform: rotate(45deg)
+					top: 13px
+					background-color: orange
+	&-bar
+		display: none
+		align-items: center
+		position: relative
+		cursor: pointer
+		height: 30px
+		width: 40px
+		+media-breakpoint-down(md)
+			display: flex
+		&:before, &:after
+			position: absolute
+			transition: all .25s ease
+			content: ''
+			width: 100%
+			height: 3px
+			display: block
+			right: 0
+			border-radius: 2px
+			background-color: #000
+		&:before
+			top: 4px
+		&:after
+			bottom: 4px
+		span
+			width: 100%
+			height: 3px
+			display: block
+			border-radius: 2px
+			background-color: #000
+			transition: all .25s ease
+			// position: relative
++media-breakpoint-down(md)
+	.header
+		position: fixed
+		width: 100%
+		background-color: #fff
+		&+.main
+			padding-top: 115px
+		&-list
+			display: block
+			height: auto
+			width: 100%
+			&__item
+				.header-list
+					display: none
+					overflow: hidden
+					// max-height: 0
+					transition: all .25s ease
+				&.is-active
+					&>.header-list
+						display: block !important
+					&>.header-arrow
+						&:before
+							opacity: 0
+						&:after
+							clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+		&-menu
+			position: fixed
+			top: 80px
+			right: 0
+			height: calc(100vh - 80px)
+			transition: all .25s ease
+			overflow-x: hidden
+			overflow-y: overlay
+			max-width: 380px
+			width: 100%
+			transform: translateX(100%)
+			background-color: #fff
+			padding: 30px 0
+			&.is-active
+				transform: translateX(0)
+			&::-webkit-scrollbar
+				width: 5px
