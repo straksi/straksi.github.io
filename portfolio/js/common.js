@@ -37,4 +37,20 @@
 		max: 7,
 		speed: 400
 	});
+	const portfolioItem = document.querySelectorAll('.portfolio-item');
+	let numP = 0;
+	portfolioItem.forEach( (item, i) => {
+		numP = i;
+		const top = item.getBoundingClientRect().top + pageYOffset
+		// console.log(top)
+		document.addEventListener('scroll', ()=>{
+			const  intElemScrollTop = window.scrollY;
+			if(intElemScrollTop>=top){
+				console.log(i)
+			}
+			// console.log(intElemScrollTop)
+		})
+	})
+	
+
 }));
