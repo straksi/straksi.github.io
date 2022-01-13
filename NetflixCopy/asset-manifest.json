@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/NetflixCopy/static/css/main.5d8426e7.chunk.css",
+    "main.js": "/NetflixCopy/static/js/main.7fe53ec0.chunk.js",
+    "main.js.map": "/NetflixCopy/static/js/main.7fe53ec0.chunk.js.map",
+    "runtime-main.js": "/NetflixCopy/static/js/runtime-main.570d81b3.js",
+    "runtime-main.js.map": "/NetflixCopy/static/js/runtime-main.570d81b3.js.map",
+    "static/css/2.ac39595b.chunk.css": "/NetflixCopy/static/css/2.ac39595b.chunk.css",
+    "static/js/2.c913144f.chunk.js": "/NetflixCopy/static/js/2.c913144f.chunk.js",
+    "static/js/2.c913144f.chunk.js.map": "/NetflixCopy/static/js/2.c913144f.chunk.js.map",
+    "static/js/3.a1574bd4.chunk.js": "/NetflixCopy/static/js/3.a1574bd4.chunk.js",
+    "static/js/3.a1574bd4.chunk.js.map": "/NetflixCopy/static/js/3.a1574bd4.chunk.js.map",
+    "static/js/4.fbe9ffe6.chunk.js": "/NetflixCopy/static/js/4.fbe9ffe6.chunk.js",
+    "static/js/4.fbe9ffe6.chunk.js.map": "/NetflixCopy/static/js/4.fbe9ffe6.chunk.js.map",
+    "static/js/5.c910658e.chunk.js": "/NetflixCopy/static/js/5.c910658e.chunk.js",
+    "static/js/5.c910658e.chunk.js.map": "/NetflixCopy/static/js/5.c910658e.chunk.js.map",
+    "static/js/6.73fd1efc.chunk.js": "/NetflixCopy/static/js/6.73fd1efc.chunk.js",
+    "static/js/6.73fd1efc.chunk.js.map": "/NetflixCopy/static/js/6.73fd1efc.chunk.js.map",
+    "static/js/7.024e2553.chunk.js": "/NetflixCopy/static/js/7.024e2553.chunk.js",
+    "static/js/7.024e2553.chunk.js.map": "/NetflixCopy/static/js/7.024e2553.chunk.js.map",
+    "static/js/8.035ebbb2.chunk.js": "/NetflixCopy/static/js/8.035ebbb2.chunk.js",
+    "static/js/8.035ebbb2.chunk.js.map": "/NetflixCopy/static/js/8.035ebbb2.chunk.js.map",
+    "static/js/9.d6a04091.chunk.js": "/NetflixCopy/static/js/9.d6a04091.chunk.js",
+    "static/js/9.d6a04091.chunk.js.map": "/NetflixCopy/static/js/9.d6a04091.chunk.js.map",
+    "index.html": "/NetflixCopy/index.html",
+    "static/css/2.ac39595b.chunk.css.map": "/NetflixCopy/static/css/2.ac39595b.chunk.css.map",
+    "static/css/main.5d8426e7.chunk.css.map": "/NetflixCopy/static/css/main.5d8426e7.chunk.css.map",
+    "static/js/2.c913144f.chunk.js.LICENSE.txt": "/NetflixCopy/static/js/2.c913144f.chunk.js.LICENSE.txt",
+    "static/media/style.sass": "/NetflixCopy/static/media/ProximaNovaT-Thin.0faaabde.woff",
+    "static/media/logo-m.55def236.png": "/NetflixCopy/static/media/logo-m.55def236.png",
+    "static/media/svg-logo.5787551b.svg": "/NetflixCopy/static/media/svg-logo.5787551b.svg",
+    "static/media/svg-search.966694b3.svg": "/NetflixCopy/static/media/svg-search.966694b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.570d81b3.js",
+    "static/css/2.ac39595b.chunk.css",
+    "static/js/2.c913144f.chunk.js",
+    "static/css/main.5d8426e7.chunk.css",
+    "static/js/main.7fe53ec0.chunk.js"
+  ]
+}
