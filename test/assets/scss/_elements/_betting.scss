@@ -1,0 +1,1184 @@
+.betting{
+	&__content, .sidebar__item{
+		background: #fff;
+		padding: 20px;
+		border-radius: 12px;
+		@media screen and (max-width: 991px) {
+			background: $background;
+			padding: 0;
+		}
+	}
+	&__container{
+		display: grid;
+		grid-template-columns: 1fr 360px;
+		grid-gap: 20px;
+		position: relative;
+		align-items: flex-start;
+		min-height: 100vh;
+		@media screen and (max-width: 1055px) {
+			grid-template-columns: 1fr 326px;
+		}
+		@media screen and (max-width: 991px) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__content{
+		@media screen and (max-width: 991px) {
+			// overflow: hidden;
+		}
+	}
+	&__sidebar{
+		position: sticky;
+		top: 0;
+		display: grid;
+		grid-gap: 20px;
+		top: 20px;
+		margin-top: -20px;
+	}
+	.sidebar{
+		@media screen and (max-width: 991px) {
+			display: none;
+		}
+		&__title{
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 23.44px;
+			color: $text;
+		}
+		&__text{
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 18px;
+			margin: 0;
+			&_start{
+				line-height: 16.41px;
+				color: $gray-2;
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+		}
+		&__start{
+			display: flex;
+			align-items: center;
+			&-icon{
+				min-width: 130px;
+				margin-left: 20px;
+				height: 130px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				background-color: rgba($green, .2);
+				position: relative;
+				z-index: 1;
+				&::before{
+					content: '';
+					background: $green;
+					border-radius: 50%;
+					position: absolute;
+					width: 100px;
+					height: 100px;
+					z-index: -1;
+				}
+			}
+		}
+		&__bonuses{
+			&-list{
+				margin-top: 20px;
+			}
+			&-item{
+				display: flex;
+				align-items: center;
+				background: $background;
+				justify-content: flex-end;
+				border-radius: 8px;
+				padding: 10px;
+				&+.sidebar__bonuses-item{
+					margin-top: 5px;
+				}
+			}
+			&-icon{
+				min-width: 70px;
+				width: 70px;
+				height: 36px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 6px;
+				margin-right: 10px;
+				&_pari{
+					background: $pari-color;
+				}
+				&_bet365{
+					background: $bet365-color;
+				}
+				&_bwin{
+					background: $bwin-color;
+				}
+			}
+			&-info{
+				margin-right: auto;
+				padding-right: 10px;
+			}
+
+		}
+		&__win{
+			&-header{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			&-link{
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 16.41px;
+				color: $green;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			&-results{
+				display: grid;
+				grid-template-columns: repeat(3,1fr);
+				grid-gap: 10px;
+				margin-top: 20px; 
+			}
+			&-result{
+				justify-items: center;
+				&-icon{
+					width: 70px;
+					min-width: 70px;
+					height: 70px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 50%;
+					&_home{
+						background-color: rgba($yellow, .2);
+					}
+					&_draw{
+						background-color: $background;
+					}
+					&_away{
+						background-color: rgba($green, .2);
+					}
+					&-draw{
+						color: $draw-color;
+						font-size: 40px;
+					}
+				}
+				&-odds{
+					margin-top: 12.5px;
+					display: flex;
+					align-items: center;
+					height: 30px;
+					border-radius: 32px;
+					padding: 5px;
+					width: 100%;
+					&_home{
+						background-color: rgba($yellow, .2);
+					}
+					&_draw{
+						background-color: $background;
+					}
+					&_away{
+						background-color: rgba($green, .2);
+					}
+					&-icon{
+						min-width: 40px;
+						width: 40px;
+						height: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 32px;
+						&_pari{
+							background: $pari-color;
+						}
+						&_bet365{
+							background: $bet365-color;
+						}
+						&_bwin{
+							background: $bwin-color;
+						}
+					}
+					&-text{
+						flex: 1;
+						text-align: center;
+						font-size: 12px;
+						line-height: 14.06px;
+						font-weight: 700;
+						margin-left: 5px;
+						&_home{
+							color: $yellow;
+						}
+						&_away{
+							color: $green;
+						}
+					}
+				}
+				&-text{
+					font-weight: 500;
+					font-size: 10px;
+					line-height: 11.72px;
+					color: $draw-color;
+					margin-top: 5px;
+					text-transform: uppercase;
+				}
+			}
+
+		}
+	}
+	.matches{
+		&__search{
+			margin-top: 20px;
+			display: none;
+			@media screen and (max-width: 991px) {
+				display: flex;
+				align-items: center;
+			}
+		}
+		&__header{
+			margin-top: 20px;
+			display: flex;
+			align-items: center;
+			position: relative;
+			@media screen and (max-width: 991px) {
+				max-width: calc(100vw - 30px);
+			}
+			@media screen and (max-width: 576px){
+				max-width: calc(100vw - 20px);
+			}
+		}
+		&__tab-panel{
+			margin-top: 10px;
+		}
+		&__promo{
+			margin: -20px;
+			margin-top: 10px;
+			background: $red-2;
+			border-radius: 0 0 10px 10px;
+			padding: 10px 6px 10px 20px;
+			display: flex;
+			align-items: center;
+			height: 56px;
+			@media screen and (max-width: 576px){
+				height: 42px;
+				padding: 5px;
+				padding-left: 20px;
+			}
+			@media screen and (max-width: 360px){
+				margin: -15px;
+				margin-top: 10px;
+				padding-left: 15px;
+			}
+		}		
+		&__odds{
+			margin-top: 20px;
+			@media screen and (max-width: 991px) {
+				display: none;
+			}
+		}
+	}
+	.search{
+		&__form{
+			flex: 1;
+			display: flex;
+			align-items: center;
+		}
+		&__group{
+			position: relative;
+			flex: 1;
+		}
+		&__icon{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 10px;
+			&-symbol{
+				color: $draw-color;
+				font-size: 26px;
+			}
+		}
+		&__input{
+			height: 42px;
+			width: 100%;
+			background: #EFEFF3;
+			border: none;
+			border-radius: 32px;
+			padding-left: 40px;
+			padding-right: 15px;
+		}
+		&__sort{
+			min-width: 42px;
+			height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: #EFEFF3;
+			margin-left: 10px;
+			text-align: center;
+			border: none;
+			&_symbol{
+				color: $gray-2;
+				font-size: 20px;
+			}
+		}
+	}
+	.date-tabs{
+		@media screen and (max-width: 690px){
+			position: relative;
+			&::after{
+				position: absolute;
+				content: '';
+				right: $to-border;
+				top: 0;
+				height: 100%;
+				background: linear-gradient(270deg, #F8F8FA 0%, rgba(248, 248, 250, 0) 100%);
+				width: 55px;
+				pointer-events: none;
+				transition: $trans;
+			}
+			&:hover{
+				&::after{
+					width: 30px;
+				}
+			}
+		}
+		&__icon{
+			min-width: 42px;
+			min-height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			background: $gray-color;
+			margin-right: 20px;
+			text-align: center;
+			@media screen and (max-width: 991px) {
+				background: #E7F4EA;
+			}
+			&_calendar{
+				display: block;
+				font-size: 20px;
+				color: $gray-2;
+				font-weight: 700;
+				@media screen and (max-width: 991px) {
+					color: $green;
+				}
+			}
+		}
+		&__rail{
+			flex: 1;
+			@media screen and (max-width: 690px) {
+				overflow-x: scroll;
+				-webkit-overflow-scrolling: touch;
+				-ms-overflow-style: -ms-autohiding-scrollbar;
+				scrollbar-width: none;
+				margin-right: $to-border;
+				position: relative;
+				&::-webkit-scrollbar{
+					display: none;
+				}
+			}
+		}
+		&__list{
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			grid-gap: 5px;
+			margin-top: 0;
+			@media screen and (max-width: 690px) {
+				display: flex;
+				grid-gap: 0;
+			}
+		}
+		&__item{
+			width: 100%;
+			@media screen and (max-width: 690px) {
+				margin-right: 5px;
+			}
+			&:last-child{
+				@media screen and (max-width: 690px){
+					padding-right: 15px;
+					width: 100px;
+				}
+				@media screen and (max-width: 576px){
+					width: 72px;
+					padding-right: 10px;
+				}
+			}
+		}
+		&__button{
+			cursor: pointer;
+			width: 100%;
+			height: 62px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: $gray-color;
+			border-radius: 8px;
+			border: 1px solid rgba($green, 0);
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 100%;
+			color: $gray-2;
+			transition: $trans;
+			position: relative;
+			@media screen and (max-width: 991px) {
+				background: #fff;
+			}
+			@media screen and (max-width: 690px){
+				min-width: 85px;
+				width: 85px;
+			}
+			@media screen and (max-width: 576px){
+				font-size: 14px;
+				line-height: 16px;
+				width: 62px;
+				min-width: 62px;
+				height: 50px;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				top: 4px;
+				right: 4px;
+				border-radius: 50%;
+				opacity: 0;
+				transform: scale(0);
+				width: 6px;
+				height: 6px;
+				background: $green;
+				opacity: 0;
+				transition: $trans;
+			}
+			&[aria-selected="true"]{
+				background: #E7F4EA;
+				border: 1px solid rgba($green, 1);
+				&::before{
+					opacity: 1;
+					transform: scale(1);
+				}
+				.date-tabs__day{
+					color: $green;
+				}
+				.date-tabs__label{
+					color: $green;
+				}
+			}
+			&:hover{
+				border: 1px solid rgba($green, 1);
+			}
+		}
+		&__day{
+			font-weight: 700;
+			transition: $trans;
+		}
+		&__label{
+			font-weight: 400;
+			line-height: 16px;
+			font-size: 14px;
+			color: $gray-text;
+			transition: $trans;
+			@media screen and (max-width: 576px){
+				font-size: 12px;
+			}
+		}
+	}
+	.status-tabs{
+		&__header{
+			// margin-top: 20px;
+			@media screen and (max-width: 991px) {
+				margin-right: $to-border;
+				margin-left: $to-border;
+			}
+		}
+		&__list{
+			margin-top: 0px;
+			display: flex;
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: $gray-text;
+			}
+		}
+		&__item{
+			flex: 1 1 100%;
+			&:first-child{
+				display: none;
+				@media screen and (max-width: 991px) {
+					display: block;
+				}
+			}
+		}
+		&__button{
+			width: 100%;
+			background: none;
+			border: none;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 11px;
+			cursor: pointer;
+			position: relative;
+			z-index: 1;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 16px;
+			color: $gray-text;
+			transition: $trans;
+			@media screen and (max-width: 576px){
+				font-size: 12px;
+				height: 41px;
+				padding-top: 7px;
+			}
+			&::before, &::after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				transition: $trans;
+				transform-origin: bottom;
+			}
+			&::before{
+				height: 2px;
+				background: $green;
+				transform: scaleY(0);
+			}
+			&::after{
+				height: 100%;
+				background: linear-gradient(180deg, rgba(51, 182, 60, 0) 0%, rgba(51, 182, 60, 0.1) 100%);
+				z-index: -1;
+				pointer-events: none;
+				transform: scaleY(0);
+				opacity: 0;
+			}
+			&:hover{
+				color: $green;
+				.status-tabs__icon{
+					color: $green;
+				}
+			}
+			&[aria-selected="true"]{
+				color: $green;
+				&::before{
+					transform: scaleY(1);
+				}
+				&::after{
+					transform: scaleY(1);
+					opacity: 1;
+				}
+				.status-tabs__icon{
+					color: $green;
+				}
+			}
+		}
+		&__icon{
+			margin-right: 10px;
+			transition: $trans;
+			color: $gray-text;
+			// font-weight: 500;
+			font-size: 20px;
+			transition: $trans;
+			@media screen and (max-width: 576px){
+				margin-right: 5px;
+				font-size: 16px;
+			}
+		}
+		&__content{
+			margin-top: 20px;
+		}
+	}
+	.accordion{
+		&__item{
+			&+.accordion__item{
+				margin-top: 40px;
+				@media screen and (max-width: 991px) {
+					margin-top: 10px;
+				}
+			}
+		}
+		&__header{
+			// margin-bottom: 10px;
+		}
+		&__button{
+			width: 100%;
+			height: 45px;
+			background: none;
+			display: flex;
+			align-items: center;
+			border: none;
+			cursor: pointer;
+			justify-content: space-between;
+			padding: 9px 20px;
+			@media screen and (max-width: 991px) {
+				height: 42px;
+			}
+			@media screen and (max-width: 576px){
+				padding: 10px;
+			}
+			&[aria-expanded="true"]{
+				.accordion__button-icon-symbol{
+					transform: rotate(180deg);
+				}
+			}
+			&-content{
+				display: flex;
+				align-items: center;
+			}
+			&-league{
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 20px;
+				display: flex;
+				align-items: center;
+				margin-right: 10px;
+				@media screen and (max-width: 576px){
+					font-size: 14px;
+				}
+				&-icon{
+					margin-right: 10px;
+					min-width: 25px;
+					@media screen and (max-width: 576px){
+						min-width: 20px;
+						width: 20px;
+					}
+				}
+			}
+			&-country{
+				display: flex;
+				align-items: center;
+				font-size: 14px;
+				line-height: 16px;
+				color: $gray-2;
+				margin-right: 10px;
+				@media screen and (max-width: 576px){
+					font-size: 12px;
+					line-height: 14.06px;
+				}
+				&-icon{
+					margin-right: 5px;
+					@media screen and (max-width: 576px){
+						max-width: 18px;
+					}
+				}
+			}
+			&-matches{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: $green;
+				border-radius: 4px;
+				height: 24px;
+				color: #fff;
+				padding: 2px 10px;
+				@media screen and (max-width: 576px){
+					padding: 2px 4px;
+					height: 22px;
+					width: 22px;
+				}
+				&-text{
+					font-size: 12px;
+					color: inherit;
+					line-height: 20px;
+					@media screen and (max-width: 576px){
+						display: none;
+					}
+				}
+				&-counter{
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 20px;
+					color: inherit;
+					margin-left: 5px;
+					@media screen and (max-width: 576px){
+						margin-left: 0;
+						font-size: 12px;
+						line-height: 18px;
+					}
+				}
+			}
+			&-icon{
+				display: flex;
+				align-items: center;
+				margin-right: -6px;
+				&-symbol{
+					font-size: 30px;
+					font-weight: 400;
+					color: $gray-2;
+					transition: $trans;
+				}
+			}
+		}
+		&__body{
+			// margin-top: 10px;
+			display: grid;
+			grid-gap: 10px;
+			min-height: 0;
+			overflow: hidden;
+		}
+		&__collapse {
+			display: grid;
+			grid-template-rows: 0fr;
+			transition: $trans;
+			overflow: hidden;
+			margin-top: 0px;
+			
+			&.show {
+				grid-template-rows: 1fr;
+				margin-top: 10px;
+			}
+		}
+	}
+	.match{
+		&-card{
+			padding: 20px;
+			padding-top: 20px;
+			@media screen and (max-width: 991px) {
+				background: #fff;
+				border-radius: 10px;
+			}
+			@media screen and (max-width: 360px){
+				padding: 15px;
+			}
+			&__details{
+				margin-top: 10px;
+				display: flex;
+				align-items: flex-start;
+				@media screen and (max-width: 576px){
+					flex-direction: column;
+				}
+			}
+		}
+		&-preview{
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			align-items: center;
+			@media screen and (max-width: 576px){
+				grid-template-columns: 1fr 80px 1fr;
+			}
+			@media screen and (max-width: 385px){
+				grid-template-columns: repeat(2,1fr);
+				grid-gap: 5px;
+			}
+			&__time{
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 16px;
+				display: flex;
+				align-items: center;
+				&-gtm{
+					font-weight: 400;
+					font-size: 10px;
+					line-height: 16px;
+					margin-left: 5px;
+					color: $gray-2;
+					&_odds{
+						font-size: 12px;
+					}
+				}
+			}
+			&__status{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				justify-self: center;
+				position: relative;
+				padding: 2px 10px;
+				height: 20px;
+				border-radius: 32px;
+				font-weight: 700;
+				font-size: 10px;
+				line-height: 10px;
+				min-width: 53px;
+				@media screen and (max-width: 385px){
+					grid-column: span 2;
+					order: -1;
+				}
+				&::before{
+					content: '';
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-right: 2px;
+					width: 12px;
+					min-width: 12px;
+					height: 12px;
+				}
+				&_live{
+					background: $red;
+					color: #fff;
+					&::before{
+						background:#fff;
+						width: 4px;
+						height: 4px;
+						border-radius: 50%;
+						min-width: 4px;
+						margin-right: 7px;
+						box-shadow: 0 0 6px 2px #ffffff;
+					}
+				}
+				&_upcoming{
+					background: $background;
+					color: $gray-2;
+					&::before{
+						content: "event";
+						font-family: 'Material Symbols Outlined';
+					}
+				}
+				&_finished{
+					background: $green;
+					color: #fff;
+					&::before{
+						content: "sports_score";
+						font-family: 'Material Symbols Outlined';
+					}
+				}
+			}
+			&__favorite{
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: none;
+				border: none;
+				justify-self: flex-end;
+				padding: 0;
+				@media screen and (max-width: 576px){
+					width: 24px;
+					height: 24px;
+					svg{
+						width: 14px;
+						height: 14px;
+					}
+				}
+			}
+		}
+		&-details{
+			&__teams{
+				display: flex;
+				align-items: center;
+				min-width: 53.126%;
+				justify-content: space-between;
+				margin-top: 7.5px;
+				@media screen and (max-width: 576px){
+					width: 100%;
+				}
+			}
+			&__team{
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				&:last-child{
+					.match-details__team-score{
+						text-align: right;
+						justify-content: flex-end;
+					}
+				}
+				&-info{
+					@media screen and (max-width: 576px){
+						max-width: 55px;
+						display: flex;
+						flex-direction: column;
+					}
+				}
+				&-score{
+					min-width: 42px;
+					font-size: 24px;
+					font-weight: 700;
+					line-height: 16px;
+					margin-top: -21px;
+					display: flex;
+					align-items: center;
+					position: relative;
+					@media screen and (max-width: 576px){
+						font-size: 20px;
+						min-width: 35px;
+					}
+					&_none{
+						height: 2px;
+						min-width: 35px;
+						border-radius: 12px;
+						background: $text;
+						@media screen and (max-width: 576px){
+							min-width: 30px;
+						}
+					}
+				}
+				&-name{
+					font-weight: 500;
+					font-size: 12px;
+					text-transform: uppercase;
+					line-height: 16px;
+					margin-top: 5px;
+					text-align: center;
+				}
+			}
+			&__versus{
+				font-size: 16px;
+				line-height: 16px;
+				color: #ADADAD;
+				text-align: center;
+				margin-top: -21px;
+				margin-left: 10px;
+				margin-right: 10px;
+				@media screen and (max-width: 576px){
+					font-size: 14px;
+				}
+			}
+			&__list{
+				margin-top: 0;
+				margin-left: 20px;
+				@media screen and (max-width: 576px){
+					margin-left: 0;
+					margin-top: 10px;
+				}
+			}
+			&__item{
+				display: flex;
+				align-items: center;
+				&+.match-details__item{
+					margin-top: 5px;
+				}
+				&-text{
+					font-size: 14px;
+					line-height: 16.41px;
+					color: $gray-2;
+					@media screen and (max-width: 576px){
+						font-size: 12px;
+						line-height: 14.06px;
+					}
+				}
+				&-symbol{
+					font-size: 18px;
+					color: $gray-2;
+					@media screen and (max-width: 576px){
+						font-size: 16px;
+					}
+				}
+				&-img{
+					max-width: 20px;
+					@media screen and (max-width: 576px){
+						max-width: 15px;
+					}
+				}
+			}
+			&__icon{
+				min-width: 20px;
+				min-height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 10px;
+				text-align: center;
+				@media screen and (max-width: 576px){
+					min-width: 15px;
+					min-height: 15px;
+				}
+				&-letter{
+					font-size: 14px;
+					line-height: 15px;
+					color: $gray-2;
+					@media screen and (max-width: 576px){
+						font-size: 12px;
+						line-height: 13px;
+					}
+					&_v{
+						margin-top: -5px;
+					}
+					&_s{
+						margin-bottom: -2px;
+					}
+				}
+			}
+		}
+	}
+	.promo{
+		&__text{
+			font-size: 14px;
+			line-height: 16px;
+			color: #fff;
+			margin-right: 20px;
+			@media screen and (max-width: 576px){
+				font-size: 10px;
+				margin-right: 10px;
+			}
+		}
+		&__icon{
+			max-width: 64px;
+			margin-right: 20px;
+			@media screen and (max-width: 576px){
+				max-width: 38px;
+			}
+		}
+		&__button{
+			margin-left: auto;
+			width: 100%;
+			max-width: 290px;
+			background: #fff;
+			color: $red-2;
+			position: relative;
+			@media screen and (max-width: 576px){
+				max-width: 206px;
+				flex: 1;
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border: 1px solid #fff;
+				opacity: 0;
+				transition: $trans;
+				pointer-events: none;
+				border-radius: inherit;
+				box-sizing: border-box;
+			}
+			&:hover{
+				color: #fff;
+				background: $red-2;
+				&::before{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.odds{
+		&__main{
+			margin-top: 15px;
+		}
+		&__item{
+			margin-top: 30px;
+			padding: 20px;
+			padding-top: 25px;
+		}
+		&__team{
+			&+.odds__team{
+				margin-top: 5px;
+			}
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			&-info{
+				display: flex;
+				align-items: center;
+			}
+			&-logo{
+				max-width: 33px;
+			}
+			&-name{
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 14px;
+				margin-left: 10px;
+				color: $gray-2;
+			}
+			&-body{
+				display: flex;
+				align-items: center;
+			}
+			&-states{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				margin-right: 5px;
+				text-align: center;
+				height: 34px;
+				&-text{
+					font-weight: 900;
+					font-size: 12px;
+					line-height: 12px;
+					color: $gray-2;
+				}
+			}
+			&-nums{
+				display: flex;;
+			}
+			&-num{
+				height: 49px;
+				width: 60px;
+				background: $background;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				&+.odds__team-num{
+					margin-left: 5px;
+				}
+				&-text{
+					font-size: 12px;
+					line-height: 12px;
+					font-weight: 700;
+					&_win{
+						font-weight: 900;
+						color: $green;
+						position: relative;
+						display: flex;
+						align-items: center;
+						margin-bottom: 5px;
+						&::after{
+							content: '';
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							min-width: 10px;
+							height: 10px;
+							background-image: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.25007 7.33328H2.75007V3.99994H0.733398L4.00007 0.733276L7.26673 3.99994H5.25007V7.33328Z" fill="%2333B63C"/></svg>');
+							background-repeat: no-repeat;
+						}
+					}
+				}
+			}
+		}
+		&__bottom{
+			margin-top: 15px;
+		}
+		&__buttons{
+			display: flex;
+			justify-content: flex-end;
+		}
+		&__button{
+			&+.odds__button{
+				margin-left: 20px;
+			}
+			padding-top: 13px;
+			padding-bottom: 13px;
+			min-width: 160px;
+			line-height: 16px;
+			text-align: center;
+			&_icon{
+				background: $background;
+				color: $green;
+				padding-left: 20px;
+				&-symbol{
+					color: $green;
+				}
+				&:hover{
+					background: $green;
+					color: #fff;
+					.odds__button_icon-symbol{
+						color: #fff;
+					}
+				}
+			}
+			&_disabled{
+				font-size: 16px;
+			}
+		}
+	}
+}

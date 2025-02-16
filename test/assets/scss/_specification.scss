@@ -1,0 +1,142 @@
+::placeholder {
+    color: $draw-color;
+    font-size: 14px;
+    font-weight: 400;
+    @media screen and (max-width: 425px) {
+    }
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: darken(#eeeeee, 10%);
+    border-radius: 10px;
+    &:hover {
+        background: darken(#eeeeee, 20%);
+    }
+}
+::selection {
+    background-color: $accent;
+    color: #fff;
+}
+body {
+    min-width: 319px;
+    position: relative;
+    line-height: 16px;
+    font-family: $default-font;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    color: $text;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    background: $background;
+    margin: 20px 0;
+    min-height: 100vh;
+    *{
+        box-sizing: border-box;
+    }
+    @media screen and (max-width: 576px){
+        font-size: 12px;
+    }
+    input, textarea {
+        border: #666 1px solid;
+        outline: none;
+    }
+}
+button {
+    font-family: $default-font;
+    outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    color: $text;
+    line-height: 1.2em;
+}
+p {
+    color: $text;
+    font-family: $default-font;
+    line-height: 120%;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+span {
+    color: $text;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: $text;
+    transition: all .25s ease;
+
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+b, strong {
+    font-weight: 600;
+}
+input {
+    font-family: $default-font;
+    color: $text;
+}
+.container{
+    max-width: 1130px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    @media screen and (max-width: 576px){
+        padding: 0 10px;
+    }
+}
+.title{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    @media screen and (max-width: 576px){
+        font-size: 24px;
+    }
+}
+[role="tabpanel"] {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+    &[aria-hidden="false"] {
+        display: block;
+        opacity: 1;
+    }
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.date-tabs__button {
+transition: background-color 0.2s ease;
+
+&.active {
+    // Стили для активной кнопки
+}
+}
